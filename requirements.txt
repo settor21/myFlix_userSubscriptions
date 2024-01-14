@@ -1,3 +1,9 @@
 Flask
 pymongo
 stripe
+datetime
+gunicorn 
+gevent
+requests
+pyjwt
+Werkzeug
