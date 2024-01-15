@@ -6,8 +6,7 @@ import stripe
 app = Flask(__name__)
 
 # Initialize MongoDB client
-mongo_client = MongoClient(
-    'mongodb+srv://amedikusettor:Skaq0084@myflixproject.soxjrzv.mongodb.net/?retryWrites=true&w=majority')
+mongo_client = MongoClient('mongodb://35.239.170.49:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.1.1')
 db = mongo_client['userSubscriptions']
 subscription_collection_confirm = db['subscriptionConfirm']
 
