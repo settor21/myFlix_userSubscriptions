@@ -21,7 +21,7 @@ pipeline {
                 axes {
                     axis {
                         name 'SERVER_IP'
-                        values '35.202.82.185', '34.121.216.186'
+                        values '34.28.215.214', '35.222.3.176'
                     }
                 }
                 stages {

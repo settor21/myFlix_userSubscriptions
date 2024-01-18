@@ -14,7 +14,7 @@ subscription_collection_confirm = db['subscriptionConfirm']
 stripe.api_key = 'sk_test_51OWM3eAf4waSqpHWwFP0YNXUMYBX3J1Wc0ybPf5ASHmufkIaa6LNJC8byZRtOKXZJ911VfRqsiSEfC3ZpkLP65iM00v1QHAGAY'
 
 # This is your Stripe CLI webhook secret for testing your endpoint locally.
-endpoint_secret = 'whsec_zlbH2arKA64u2fdCGtim9W20s7eMhUAW'
+endpoint_secret = 'whsec_6nEciWXYWavBWXovYUeZln6YnEDoSV8C'
 
 # Global variable to store user_id
 current_user_id = None
@@ -61,7 +61,7 @@ def webhook():
         # For Paid-tier, set paidSubscriber to CONFIRMED and amount to 5, and store in MongoDB
         data = {'userId': current_user_id, 'paidSubscriber': 'CONFIRMED', 'sessionID': session,
                 'amount': 5, 'timestamp': datetime.now()}
-        subscription_collection_confirm.insert_one(data)
+        # subscription_collection_confirm.insert_one(data)
         # # Redirect to login page after successful payment
 
     return jsonify(success=True)
