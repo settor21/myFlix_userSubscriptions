@@ -61,9 +61,8 @@ def webhook():
         # For Paid-tier, set paidSubscriber to CONFIRMED and amount to 5, and store in MongoDB
         data = {'userId': current_user_id, 'paidSubscriber': 'CONFIRMED', 'sessionID': session,
                 'amount': 5, 'timestamp': datetime.now()}
-        # subscription_collection_confirm.insert_one(data)
-        # # Redirect to login page after successful payment
-
+        subscription_collection_confirm.insert_one(data)
+        # Redirect to login page after successful payment
     return jsonify(success=True)
 
 
