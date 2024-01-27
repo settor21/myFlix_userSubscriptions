@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         PROD_USERNAME = 'amedikusettor'
-        PROD_SERVER = '34.139.58.141'
+        PROD_SERVER = 'xxxxx'
         PROD_DIR = '/home/amedikusettor/myflix/user-subscriptions'
         DOCKER_IMAGE_NAME = 'user-subscriptions-deployment'
         DOCKER_CONTAINER_NAME = 'user-subscriptions'
